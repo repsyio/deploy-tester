@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>io.repsy.helloworld.use</groupId>
+  <artifactId>maven-hello-world-jar</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>maven-hello-world-jar</name>
+  <description>Usage of Hello World JAR Library using maven build tool</description>
+  <url>https://github.com/repsyio/repsy-hello-wrold/maven/maven-hello-world-jar</url>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>repsy</id>
+      <name>Repsy Cloud Repo</name>
+      <url>${env.REPSY_BASE_URL}/mvn/${env.REPSY_USERNAME}/${env.REPSY_REPO_NAME}</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.repsy.helloworld</groupId>
+      <artifactId>maven-hello-world-jar</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>use-maven-hello-world-jar</finalName>
+  </build>
+</project>
